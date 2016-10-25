@@ -10,6 +10,8 @@ if !File.directory?(file_path)
   Dir.mkdir file_path
 end
 
+File.delete "./tokens.json" if File.exists? "./tokens.json"
+
 doc = Nokogiri::XML(open("http://feeds.podtrac.com/c8yBGHRafqhz"))
 mp3_files = doc.xpath("//enclosure")
 images = doc.xpath("//item/description")
@@ -57,3 +59,5 @@ episode_count.downto(1) do |i|
   description = "Full show notes available at http://www.codingblocks.net/podcast/episode#{(episode_count - i + 1)}"
   system "node upload-to-youtube.js \"#{movie_file_name}\" \"#{title}\" \"#{description}\""
 end
+
+File.delete "./tokens.json" if File.exists? "./tokens.json"
