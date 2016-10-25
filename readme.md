@@ -3,6 +3,11 @@ This will start downloading and uploading the coding blocks episodes from the (h
 So, first TODO is to first check YouTube for the title.
 Then, it would be nice to do some cleanup and parameterize at some point.
 
+0. Requires ffmpeg to make the movies
+````
+brew install ffmpeg
+````
+
 1. Requires Ruby, and the following gems:
 ````
 gem install nokogiri
