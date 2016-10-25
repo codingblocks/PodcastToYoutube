@@ -20,7 +20,7 @@ var upload = function(tokens) {
             snippet: {
                 title: title,
                 description: description,
-                tags: ['Podcast', 'Coding', 'Programming', 'Podcast', 'Coding Blocks', 'CodingBlocks.net']
+                tags: ['Podcast', 'Coding', 'Programming', 'Podcast', 'Coding Blocks', 'CodingBlocks.net', 'Programming Podcast', 'Software Engineering Podcast']
             }
             // I don't want to spam my subscribers
             , status: {
