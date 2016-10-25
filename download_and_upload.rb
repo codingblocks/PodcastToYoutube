@@ -29,7 +29,7 @@ episode_count.downto(1) do |i|
   dir = file_path + "/" + episode_number
   if File.directory?(dir)
     puts "Skipping episode #{i}"
-    #next
+    next
   else
     Dir.mkdir dir
   end
@@ -38,18 +38,18 @@ episode_count.downto(1) do |i|
   puts "Download Mp3"
   mp3_url = mp3_files[i - 1]["url"]
   mp3_file_name = mp3_url.match(/[^\/]*\.mp3$/)
-  #system "curl -L #{mp3_url} --output #{dir}/#{mp3_file_name}"
+  system "curl -L #{mp3_url} --output #{dir}/#{mp3_file_name}"
 
   ## Download Featured Image
   puts "Download Image"
   image_url = images[i - 1].to_s.match(/([^\"]*\.\w+)/).to_s
   image_file_name = image_url.match(/[^\/]*\.\w+$/)
-  #system "curl -L #{image_url} --output #{dir}/#{image_file_name} -A \"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36\""
+  system "curl -L #{image_url} --output #{dir}/#{image_file_name} -A \"Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36\""
 
   ## ffmpg
   puts "Create movie"
   movie_file_name = "#{dir}/coding-blocks-episode-#{episode_number}.mkv"
-  #system "ffmpeg -loop 1 -r 2 -i #{dir}/#{image_file_name} -i #{dir}/#{mp3_file_name} -vf \"scale=320:trunc(ow/a/2)*2\" -c:v libx264 -preset slow -tune stillimage -crf 18 -c:a copy -shortest -pix_fmt yuv420p -threads 0 #{movie_file_name}"
+  system "ffmpeg -loop 1 -r 2 -i #{dir}/#{image_file_name} -i #{dir}/#{mp3_file_name} -vf \"scale=320:trunc(ow/a/2)*2\" -c:v libx264 -preset slow -tune stillimage -crf 18 -c:a copy -shortest -pix_fmt yuv420p -threads 0 #{movie_file_name}"
   
   ## upload to youtube
   puts "Upload to youtube"
