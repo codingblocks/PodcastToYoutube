@@ -7,7 +7,7 @@ gulp.task('clean', function () {
 });
 
 const sloc = require('gulp-sloc');
-gulp.task('loc', function(){
+gulp.task('loc', ['clean'], function(){
   gulp.src(['*.js'])
     .pipe(sloc({
       reportType: 'json'
@@ -16,7 +16,7 @@ gulp.task('loc', function(){
 });
 
 const jshint = require('gulp-jshint');
-gulp.task('lint', function() {
+gulp.task('lint', ['clean'], function() {
   const fs = require('fs');
   var dir = './reports/lint/';
 
@@ -31,7 +31,7 @@ gulp.task('lint', function() {
 });
 
 const istanbul = require('gulp-istanbul');
-gulp.task('setup-coverage', function () {
+gulp.task('setup-coverage', ['clean'], function () {
   return gulp.src(['./upload-to-youtube.js'])
     // Covering files
     .pipe(istanbul())
@@ -40,7 +40,7 @@ gulp.task('setup-coverage', function () {
 });
 
 const mocha = require('gulp-mocha'); 
-gulp.task('test', ['setup-coverage'], () => 
+gulp.task('test', ['clean', 'setup-coverage'], () => 
     gulp.src('./tests/tests.js', {read: false})
         .pipe(mocha())
         .pipe(istanbul.writeReports('./reports/coverage'))
