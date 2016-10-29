@@ -1,6 +1,5 @@
 
-31 lint errors found in upload-to-youtube.js
-  [5,1](W104) 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
+20 lint errors found in upload-to-youtube.js
   [6,5](I001) Comma warnings can be turned off with 'laxcomma'.
   [5,38](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [6,24](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
@@ -8,26 +7,16 @@
   [8,28](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [9,36](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [10,26](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
-  [13,1](W104) 'const' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-  [13,30](W119) 'template literal syntax' is only available in ES6 (use 'esversion: 6').
   [24,13](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [29,9](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [31,17](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [36,9](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
-  [39,18](W119) 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-  [45,20](W119) 'template literal syntax' is only available in ES6 (use 'esversion: 6').
-  [49,35](W119) 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-  [53,13](W104) 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
   [54,23](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [55,42](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [56,46](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [57,60](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
-  [66,9](W104) 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
-  [71,9](W104) 'let' is available in ES6 (use 'esversion: 6') or Mozilla JS extensions (use moz).
   [72,19](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [73,38](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [74,42](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [75,56](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
   [80,26](W014) Misleading line break before ','; readers may interpret this as an expression boundary.
-  [86,48](W119) 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').
-  [88,57](W119) 'arrow function syntax (=>)' is only available in ES6 (use 'esversion: 6').

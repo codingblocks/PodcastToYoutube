@@ -32,6 +32,10 @@ ruby download_and_upload.rb
 
 ## Goals
 * Keep some basic metrics
+ x Lint
+ x Loc
+ * Tests
+ * Coverage
 * Use pragmatic best practices
 * Want this to end up as a highly usable electron app
 * Replace the ruby code with javascript

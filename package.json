@@ -20,8 +20,14 @@
     "sloc": "^0.1.11"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "gulp-clean": "^0.3.2",
+    "gulp-istanbul": "^1.1.1",
     "gulp-jshint": "^2.0.2",
     "gulp-jshint-file-reporter": "0.0.2",
-    "jshint": "^2.9.4"
+    "gulp-mocha": "^3.0.1",
+    "istanbul": "^0.4.5",
+    "jshint": "^2.9.4",
+    "mocha": "^3.1.2"
   }
 }
