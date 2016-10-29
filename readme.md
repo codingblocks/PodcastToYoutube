@@ -29,3 +29,12 @@ npm install
 ````
 ruby download_and_upload.rb
 ````
+
+## Goals
+* Keep some basic metrics
+* Use pragmatic best practices
+* Want this to end up as a highly usable electron app
+* Replace the ruby code with javascript
+* Want to create any packages that might be useful along the way
+* Want tests!
+* Make sure the readme steps work, and has nice examples!
