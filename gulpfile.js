@@ -12,7 +12,7 @@ gulp.task('loc', function(){
 var jshint = require('gulp-jshint');
 gulp.task('lint', function() {
   return gulp.src('./upload-to-youtube.js')
-    .pipe(jshint())
+    .pipe(jshint({esversion: 6}))
     .pipe(jshint.reporter('gulp-jshint-file-reporter', {
       filename: './reports/jshint-errors.log'
     }));
