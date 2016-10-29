@@ -32,7 +32,7 @@ gulp.task('lint', function() {
 
 const istanbul = require('gulp-istanbul');
 gulp.task('setup-coverage', function () {
-  return gulp.src(['/upload-to-youtube.js'])
+  return gulp.src(['./upload-to-youtube.js'])
     // Covering files
     .pipe(istanbul())
     // Force `require` to return covered files
@@ -41,7 +41,7 @@ gulp.task('setup-coverage', function () {
 
 const mocha = require('gulp-mocha'); 
 gulp.task('test', ['setup-coverage'], () => 
-    gulp.src('tests/test.js', {read: false})
+    gulp.src('./tests/tests.js', {read: false})
         .pipe(mocha())
         .pipe(istanbul.writeReports('./reports/coverage'))
 );

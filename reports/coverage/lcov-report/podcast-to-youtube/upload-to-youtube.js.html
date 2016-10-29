@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for podcast-to-youtube/upload-to-youtube.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">podcast-to-youtube/</a> upload-to-youtube.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">34.38% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>11/32</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">25% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>1/4</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>0/3</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">34.38% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>11/32</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const fileName = process.argv[2],
+    title = process.argv[3],
+    description = process.argv[4];
+&nbsp;
+const Youtube = require("youtube-api")
+    , fs = require("fs")
+    , readJson = require("r-json")
+    , Lien = require("lien")
+    , Logger = require("bug-killer")
+    , opn = require("opn")
+    , prettyBytes = require("pretty-bytes");
+&nbsp;
+const CREDENTIALS = readJson(`${__dirname}/client_secrets.json`);
+&nbsp;
+&nbsp;
+var upload = <span class="fstat-no" title="function not covered" >function(tokens) {</span>
+<span class="cstat-no" title="statement not covered" >    var req = Youtube.videos.insert({</span>
+        resource: {
+            // Video title and description
+            snippet: {
+                title: title,
+                description: description,
+                tags: ['Podcast', 'Coding', 'Programming', 'Podcast', 'Coding Blocks', 'CodingBlocks.net', 'Programming Podcast', 'Software Engineering Podcast']
+            }
+            // I don't want to spam my subscribers
+            , status: {
+                privacyStatus: "public"
+            }
+        }
+        // This is for the callback function
+        , part: "snippet,status"
+&nbsp;
+        // Create the readable stream to upload the video
+        , media: {
+            body: fs.createReadStream(fileName)
+        }
+&nbsp;
+        , notifySubscribers : 'false'
+    }, (err, data) =&gt; {
+<span class="cstat-no" title="statement not covered" >        console.log("Done.");</span>
+<span class="cstat-no" title="statement not covered" >        process.exit();</span>
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    setInterval(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >        Logger.log(`${prettyBytes(req.req.connection._bytesDispatched)} bytes uploaded.`);</span>
+    }, 250);
+};
+&nbsp;
+fs.exists('./tokens.json', (exists) =&gt; {
+    <span class="missing-if-branch" title="if path not taken" >I</span>if(exists) {
+<span class="cstat-no" title="statement not covered" >        fs.readFile('./tokens.json', <span class="fstat-no" title="function not covered" >function(err,data) {</span></span>
+<span class="cstat-no" title="statement not covered" >            var tokens = JSON.parse(data);</span>
+<span class="cstat-no" title="statement not covered" >            let oauth = Youtube.authenticate({</span>
+                type: "oauth"
+            , client_id: CREDENTIALS.web.client_id
+            , client_secret: CREDENTIALS.web.client_secret
+            , redirect_url: CREDENTIALS.web.redirect_uris[0]
+            , refresh_token: tokens.refresh_token
+            });
+<span class="cstat-no" title="statement not covered" >            oauth.setCredentials(tokens);</span>
+<span class="cstat-no" title="statement not covered" >            console.log('Using cached tokens');</span>
+<span class="cstat-no" title="statement not covered" >            upload(tokens);</span>
+        });
+    } else {
+        // Init lien server
+        let server = new Lien({ host: "localhost" , port: 5000 });
+&nbsp;
+        // Authenticate
+        // You can access the Youtube resources via OAuth2 only.
+        // https://developers.google.com/youtube/v3/guides/moving_to_oauth#service_accounts
+        let oauth = Youtube.authenticate({
+            type: "oauth"
+        , client_id: CREDENTIALS.web.client_id
+        , client_secret: CREDENTIALS.web.client_secret
+        , redirect_url: CREDENTIALS.web.redirect_uris[0]
+        , 
+        });
+&nbsp;
+        opn(oauth.generateAuthUrl({
+            access_type: "offline"
+        , scope: ["https://www.googleapis.com/auth/youtube.upload"]
+        }));
+&nbsp;
+        console.log('Attempting to fetch tokens');
+        // Handle oauth2 callback
+        server.addPage("/oauth2callback", lien =&gt; {
+<span class="cstat-no" title="statement not covered" >            Logger.log("Trying to get the token using the following code: " + lien.query.code);</span>
+<span class="cstat-no" title="statement not covered" >            oauth.getToken(lien.query.code, (err, tokens) =&gt; {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                if (err) {</span>
+<span class="cstat-no" title="statement not covered" >                    lien.lien(err, 400);</span>
+<span class="cstat-no" title="statement not covered" >                    return Logger.log(err);</span>
+                }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                Logger.log("Got the tokens.");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >                oauth.setCredentials(tokens);</span>
+<span class="cstat-no" title="statement not covered" >                fs.writeFile("./tokens.json", JSON.stringify(tokens));</span>
+<span class="cstat-no" title="statement not covered" >                lien.end("The video is being uploaded. Check out the logs in the terminal.");</span>
+<span class="cstat-no" title="statement not covered" >                upload(tokens);</span>
+            });
+        });
+    }
+});</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Sat Oct 29 2016 12:31:44 GMT-0400 (EDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
